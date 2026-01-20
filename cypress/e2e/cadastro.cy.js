@@ -8,6 +8,10 @@ describe('Funcionalidade: Cadastro no Hub de Leitura', () => {
         cadastroPage.visitarPaginaCadastro()
     });
 
+    afterEach(() => {
+        cy.screenshot()
+    });
+
     it('Deve fazer cadastro com sucesso, usando função JS', () => {
         let email = `teste@${Date.now()}teste.com`
         cy.get('#name').type('Bruna Acioli')
